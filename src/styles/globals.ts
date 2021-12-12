@@ -1,7 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 
-export default createGlobalStyle`
-  html{
-    font-family:  'Poppins', sans-serif;
+const GlobalStyle = createGlobalStyle`
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    font-family: 'Special Elite', cursive;
+    scroll-behavior:smooth;
   }
 `;
+
+export default GlobalStyle;
