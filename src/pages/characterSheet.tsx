@@ -2,6 +2,7 @@ import { Box } from "@styles/components/Box";
 import { CharacterSheetPage, Title } from "@styles/pages/characterSheet";
 import BonusAtributte from "src/components/BonusAtributte";
 import Checkbox from "src/components/Checkbox";
+import DiceAction from "src/components/DiceAction";
 import InputField from "src/components/InputField";
 import ProgressBar from "src/components/ProgressBar";
 
@@ -24,7 +25,7 @@ function CharacterSheet() {
         <InputField label={"Local de nascimento"} />
         <InputField label={"Local de residência"} />
       </Box>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center bg-black rounded-md">
         <div className="grid grid-cols-2 w-full">
           <div className="flex justify-center">
             <img
@@ -33,9 +34,7 @@ function CharacterSheet() {
               alt="Logo"
             />
           </div>
-          <button className="flex justify-center">
-            <img className="w-32 h-32" src="D20.svg" alt="Dado" />
-          </button>
+          <DiceAction animated />
         </div>
         <div>
           <ProgressBar
@@ -66,7 +65,11 @@ function CharacterSheet() {
               colorBar="#161a1d"
             />
             <button>
-              <img className="w-full h-7 pl-4" src="D20.svg" alt="Dado" />
+              <img
+                className="w-full h-7 pl-4 rounded-full"
+                src="D20.svg"
+                alt="Dado"
+              />
             </button>
           </div>
           <div className="flex justify-around py-3">
@@ -97,8 +100,10 @@ function CharacterSheet() {
       </Box>
       <div>
         <Box>
-          <Title>PERÍCIAS</Title>
-          <p className="text-xs">(acesso rápido)</p>
+          <Title>
+            PERÍCIAS
+            <p className="text-xs">(acesso rápido)</p>
+          </Title>
         </Box>
       </div>
       <Box className="col-start-1 col-end-3">

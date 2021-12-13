@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const CharacterSheetPage = styled.div`
-  height: 100%;
+  background-image: url(DespairSymbol.svg);
   background-color: #000000;
+
+  height: 100%;
   color: #ffffff;
   font-size: 1.125rem;
 
